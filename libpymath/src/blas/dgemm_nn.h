@@ -1,7 +1,6 @@
 #include "ulmblas.h"
 #include <stdio.h>
-#include <emmintrin.h>
-#include <immintrin.h>
+#include <vectorclass.h">
 
 #if defined(_MSC_VER) || (defined(WIN32) || defined(WIN64) || defined(_WIN32) || defined(_WIN64))
 
