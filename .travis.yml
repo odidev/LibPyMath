@@ -25,7 +25,7 @@ env:
     - CIBW_ARCHS_LINUX=aarch64
     - CIBW_MANYLINUX_X86_64_IMAGE=manylinux1
     - CIBW_MANYLINUX_I686_IMAGE=manylinux1
-    - CIBW_MANYLINUX_AARCH64_IMAGE=manylinux2014_aarch64    
+    - CIBW_MANYLINUX_AARCH64_IMAGE=quay.io/pypa/manylinux2014_aarch64    
     - TWINE_USERNAME=__token__
 
 jobs:
