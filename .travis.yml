@@ -23,7 +23,7 @@ env:
   global:
     - CIBW_BUILD=cp3?-*
     - CIBW_ARCHS=aarch64
-    - CIBW_MANYLINUX_AARCH64_IMAGE=manylinux2014_aarch64    
+    - CIBW_MANYLINUX_AARCH64_IMAGE=manylinux2014   
     - TWINE_USERNAME=__token__
 
 jobs:
@@ -32,7 +32,7 @@ jobs:
       arch: arm64
       env: 
         - CIBW_ARCHS=aarch64
-        - CIBW_MANYLINUX_AARCH64_IMAGE=manylinux2014_aarch64    
+        - CIBW_MANYLINUX_AARCH64_IMAGE=manylinux2014    
     - services: docker
     - os: osx
       language: generic
@@ -43,7 +43,7 @@ jobs:
         - choco install python --version 3.8.0
         - export PATH="/c/Python38:/c/Python/Scripts:$PATH"
 install:
-  - python -m pip install -U setuptools wheel twine cibuildwheel==1.1.0
+  - python -m pip install -U setuptools wheel twine cibuildwheel==2.2.0
 script:
   - python -m cibuildwheel --output-dir ./wheelhouse
   - ls wheelhouse
