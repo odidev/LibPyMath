@@ -30,6 +30,9 @@ jobs:
   include:
     - os: linux
       arch: arm64
+      env: 
+        - CIBW_ARCHS=aarch64
+        - CIBW_MANYLINUX_AARCH64_IMAGE=manylinux2014_aarch64    
     - services: docker
     - os: osx
       language: generic
