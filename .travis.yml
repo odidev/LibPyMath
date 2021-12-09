@@ -19,20 +19,19 @@
 
 language: python
 os: linux
-arch:
-  - amd64
-  - arm64
 env:
   global:
     - CIBW_BUILD=cp3?-*
-    - CIBW_ARCHS_LINUX: aarch64
+   # - CIBW_ARCHS_LINUX: aarch64
     - CIBW_MANYLINUX_X86_64_IMAGE=manylinux1
-    - CIBW_MANYLINUX_AARCH64_IMAGE=manylinux2014
     - CIBW_MANYLINUX_I686_IMAGE=manylinux1
+    - CIBW_MANYLINUX_AARCH64_IMAGE=manylinux2014    
     - TWINE_USERNAME=__token__
 
 jobs:
   include:
+    - os: linux
+      arch: arm64
     - services: docker
     - os: osx
       language: generic
