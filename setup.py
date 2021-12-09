@@ -124,8 +124,10 @@ def mavxCompile():
 	c = compilerName()
 	if c == "msvc":
 		return []
-	elif c in ("gcc", "g++"):
+	elif c in ("gcc", "g++") and platform.machine()!="aarch64":
 		return ["-mavx"]
+	elif c in ("gcc", "g++") and platform.machine()=="aarch64":
+		return []
 	elif c == "clang":
 		return ["-mavx"]
 	elif c == "unix":
