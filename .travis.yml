@@ -22,8 +22,8 @@ os: linux
 env:
   global:
     - CIBW_BUILD=cp3?-*
-    - CIBW_ARCHS_LINUX=aarch64
-    - CIBW_MANYLINUX_AARCH64_IMAGE=quay.io/pypa/manylinux2014_aarch64    
+    - CIBW_ARCHS=aarch64
+    - CIBW_MANYLINUX_AARCH64_IMAGE=manylinux2014_aarch64    
     - TWINE_USERNAME=__token__
 
 jobs:
